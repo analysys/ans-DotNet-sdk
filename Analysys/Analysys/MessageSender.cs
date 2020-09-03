@@ -90,8 +90,8 @@ namespace Analysys
                 if (rsp != null) rsp.Close();
             }
 
-            //return result.ToString();
-            return AnalysysEncoder.Decompress(result.ToString());
+            return result.ToString();
+            //return AnalysysEncoder.Decompress(result.ToString());
         }
 
     }
