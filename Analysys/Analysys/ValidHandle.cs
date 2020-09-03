@@ -92,8 +92,11 @@ namespace Analysys
                 Console.WriteLine(string.Format("The property key {0} is invalid.", property.Key));
             }
 
-            if (!int.TryParse(property.Value.ToString(), out temp) &&
+            if (!(property.Value is int) &&
                 !(property.Value is bool) &&
+                !(property.Value is double) &&
+                !(property.Value is float) &&
+                !(property.Value is long) &&
                 !(property.Value is string) &&
                 !(property.Value is Array) &&
                 !(property.Value.GetType().GetGenericTypeDefinition() == typeof(List<>)))
